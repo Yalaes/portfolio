@@ -1,0 +1,34 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "laurent web developer portfolio",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css", "concat:css": "concat -o css/style.concat.css css/normalize.css css/style.css css/style.comp.css", 
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.min.css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yalaes/portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "laurent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yalaes/portfolio/issues"
+  },
+  "homepage": "https://github.com/Yalaes/portfolio#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "concat": "^1.0.3",
+    "node-sass": "^6.0.0",
+    "postcss-cli": "^8.3.1"
+  },
+  "dependencies": {
+    "postcss": "^8.3.0"
+  }
+}
