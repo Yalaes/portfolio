@@ -29,6 +29,31 @@ body {
   font-weight: 400;
   background-color: #FDFDFD; }
 
+.full-bleed {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin-bottom: 9rem; }
+  .full-bleed-right::before {
+    content: "";
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    width: 69%;
+    height: 69%;
+    border-radius: 9rem 0 0 9rem;
+    background-color: #E9F9FF; }
+  .full-bleed-left::before {
+    content: "";
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 69%;
+    height: 69%;
+    border-radius: 0 9rem 9rem 0;
+    background-color: #ECF0FD; }
+
 .container {
   position: relative;
   width: 100%;
@@ -56,6 +81,13 @@ h3, h4 {
 h3 {
   text-transform: uppercase;
   font-size: 2.4rem; }
+
+.work__h3 {
+  font-size: 4.8rem; }
+
+.work__h4 {
+  color: #4B486A;
+  text-transform: uppercase; }
 
 .section-h3 {
   position: relative;
@@ -128,6 +160,19 @@ h3 {
   .process__card-header {
     justify-content: flex-start;
     gap: 2.5rem; }
+
+.card-link {
+  font-weight: bold;
+  border: 2px solid tomato;
+  border-radius: 1rem;
+  margin-top: 3rem;
+  padding: .7rem 2rem;
+  color: tomato;
+  text-transform: uppercase;
+  transition: border-color .2s, color .2s; }
+  .card-link:hover, .card-link:focus {
+    color: coral;
+    border-color: coral; }
 
 .nav {
   position: fixed;
@@ -205,3 +250,46 @@ h3 {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 0; }
+
+.work__grid {
+  padding-top: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem; }
+
+.work__card {
+  border-radius: 3rem;
+  overflow: hidden;
+  position: relative;
+  min-width: 30rem;
+  flex: 0 1 30%;
+  background-color: transparent;
+  cursor: pointer; }
+  .work__card-img {
+    display: block;
+    width: 100%;
+    object-fit: cover; }
+  .work__card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(22, 18, 83, 0.7);
+    margin: 10%;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .35s ease; }
+    .work__card-overlay > h4 {
+      color: #FDFDFD; }
+  .work__card:hover .work__card-overlay {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-1.5rem); }
