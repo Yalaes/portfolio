@@ -2,5 +2,6 @@
 *.css.map
 *.sass.map
 *.scss.map
+*.json
 sass/
 node_modules/
