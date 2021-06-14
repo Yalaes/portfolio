@@ -1,12 +1,12 @@
 //burger menu
 const burgerBtn = document.querySelector(".burgerBtn");
-const navList = document.querySelector(".nav__list");
+const navBurger = document.querySelector(".nav-burger");
 
 burgerBtn.addEventListener("click", toggleStuff);
 
-navList.addEventListener("click", toggleStuff);
+navBurger.addEventListener("click", toggleStuff);
 
 function toggleStuff () {
     burgerBtn.classList.toggle("open");
-    navList.classList.toggle("toggle");
+    navBurger.classList.toggle("toggle");
 }
