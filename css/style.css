@@ -34,6 +34,10 @@ body {
   font-weight: 400;
   background-color: #FDFDFD; }
 
+::selection {
+  background-color: #161253;
+  color: #FDFDFD; }
+
 @keyframes up {
   0%, 15% {
     opacity: 0;
@@ -444,7 +448,6 @@ h3 {
   .process__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
     justify-content: center;
     gap: 4rem;
     margin-top: 2rem;
@@ -503,39 +506,39 @@ h3 {
     opacity: 1;
     transform: translateY(-1.5rem); }
 
-.contact__content {
-  background-color: rgba(51, 171, 220, 0.2);
-  border-radius: 5rem;
-  height: 45rem;
-  text-align: center; }
-  .contact__content-text {
-    padding-top: 8%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem; }
-    @media only screen and (max-width: 50em) {
-      .contact__content-text {
-        padding: 0 2rem; } }
-
-.contact__menu {
-  margin-top: auto; }
-
-.contact__mail {
-  margin-top: 2rem;
-  gap: 2rem; }
-  .contact__mail-text {
-    font-size: 2.4rem; }
-    @media only screen and (max-width: 28.75em) {
-      .contact__mail-text {
-        font-size: 2rem;
-        font-weight: bold; } }
-  @media only screen and (max-width: 28.75em) {
-    .contact__mail {
+.contact {
+  padding-bottom: 12rem; }
+  .contact__content {
+    background-color: rgba(51, 171, 220, 0.2);
+    border-radius: 5rem;
+    height: 45rem;
+    text-align: center; }
+    .contact__content-text {
+      padding-top: 8%;
+      height: 100%;
+      display: flex;
       flex-direction: column;
-      gap: 0; } }
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem; }
+      @media only screen and (max-width: 50em) {
+        .contact__content-text {
+          padding: 0 2rem; } }
+  .contact__menu {
+    margin-top: auto; }
+  .contact__mail {
+    margin-top: 2rem;
+    gap: 2rem; }
+    .contact__mail-text {
+      font-size: 2.4rem; }
+      @media only screen and (max-width: 28.75em) {
+        .contact__mail-text {
+          font-size: 2rem;
+          font-weight: bold; } }
+    @media only screen and (max-width: 28.75em) {
+      .contact__mail {
+        flex-direction: column;
+        gap: 0; } }
 
 .nav--footer {
   width: 100%;
