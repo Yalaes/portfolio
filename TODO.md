@@ -1,6 +1,1 @@
-- got to top btn
-- burger menu
-- overflow hidden when burger menu is deploy
-- responsive
-- scroll anim
-- replace lorem with actual text
+So far, so good
